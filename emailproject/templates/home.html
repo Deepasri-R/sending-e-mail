@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark gray text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #1a1a2e; /* Dark navy blue */
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        h2, h3 {
+            margin: 5px 0;
+            font-weight: 400;
+            color: #eaeaea; /* Light gray for subheadings */
+        }
+
+        /* Main Content Styles */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            background-color: #00aaff; /* Bright cyan */
+            color: white;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        button:hover {
+            background-color: #007acc; /* Darker cyan on hover */
+            transform: scale(1.05);
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1a1a2e; /* Same as header */
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Kamaraj College of Engineering and Technology</h1>
+        <br>
+        <h2>Web Application Development using Django Network</h2>
+        <br>
+        <h3>Deepasri R</h3>
+        <h3>22UIT115</h3>
+    </header>
+
+    <main>
+        <h1>Click the Button to Send Email</h1>
+        <form method="post" action="{% url 'send_email' %}">
+            {% csrf_token %}
+            <button type="submit">Send Email</button>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Copyright notice removed -->
+    </footer>
+</body>
+
+</html>

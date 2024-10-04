@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sent</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark blue gradient */
+            font-family: 'Arial', sans-serif;
+            color: #ecf0f1; /* Light gray text */
+            overflow: hidden;
+        }
+
+        /* Box Styling */
+        .success-box {
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent white */
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px); /* Glass effect */
+            transform: scale(1);
+            transition: transform 0.5s ease;
+        }
+
+        .success-box:hover {
+            transform: scale(1.05); /* Slight hover effect */
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #ecf0f1; /* Light gray */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #bdc3c7; /* Lighter gray */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="success-box">
+        <h1>Email Sent Successfully!</h1>
+        <p>Thank you for using our service!</p>
+    </div>
+</body>
+
+</html>
